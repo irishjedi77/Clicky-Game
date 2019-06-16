@@ -1,0 +1,52 @@
+.navbar {
+    background: blueviolet;
+    position: fixed;
+    width: 100%;
+}
+
+body { margin: 0; 
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 26px 0;
+    width: 33.3%;
+    text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 900;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.itemLeft {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.itemCenter {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: white
+}
+
+.itemRight {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: white
+}
+
+ul {
+    list-style: none;
+    display: block
+}
