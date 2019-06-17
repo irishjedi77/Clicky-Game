@@ -5,8 +5,8 @@ class Header extends Component {
     render() {
       return (
         <div>
-        <header class="header">
-        <div class="boxed">
+        <header className="header">
+        <div className="boxed">
         <h1>Sloth Clicky Game</h1>
         <h2>Click on an image to earn points, but don't click on any more than once!</h2>
         <h2>Guess all 12 corrrectly to win.</h2>

@@ -1,0 +1,15 @@
+.footer {
+    background: blueviolet;
+    height: 100px;
+    position: relative;
+    color: #fff;
+    overflow: auto;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bottom {
+    text-align: left;
+    margin-top: 35px;
+    margin-left: 10px
+}
