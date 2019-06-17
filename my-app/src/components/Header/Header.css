@@ -9,9 +9,13 @@
     text-align: center;
 }
 
-h1 {
+p {
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 60px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
 }
 
 h2 {
@@ -21,5 +25,10 @@ h2 {
 
 .boxed {
     border: 1px solid green ;
-    background-color: rgb(111, 190, 111)
+    background-color: rgb(111, 190, 111);
+    width: 75%;
+    border: 5px solid #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+    margin-left: 150px;
 }

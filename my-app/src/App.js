@@ -4,8 +4,15 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Game from "./components/Game";
 
+// state = {
+//     clickedImages: [],
+//     score: 0,
+//     goal: 8,
+//     status: ""
+//   };
 
 class App extends Component {
+
     render () {
         return (
             <div className="App">
@@ -16,6 +23,7 @@ class App extends Component {
             </div>
         )
     }
+
 }
 
 
