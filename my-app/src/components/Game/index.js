@@ -14,36 +14,34 @@ class Game extends Component {
             },
             score: 0
         }
-        this.handleClick=this.handleClick.bind(this)
+        this.handleClick = this.handleClick.bind(this)
     }
     handleClick(e, images, cb, props) {
         e.preventDefault();
-        console.log(props)
-        if(props in this.state.clickPhotos){
+        console.log("CLick", props)
+        if (props in this.state.clickPhotos) {
             console.log("already clicked")
-        } else{
-            const temp=this.state.clickPhotos
+        } else {
+            const temp = this.state.clickPhotos
             temp[props] = true
             let newScore = this.state.score
             newScore++
             // console.log(newScore)
-            this.setState({clickPhotos: temp, score: newScore})
+            this.setState({ clickPhotos: temp, score: newScore })
             console.log(this.state.score)
         }
         cb(images)
     }
 
     render() {
-        return(
-
-            <Navbar score={this.state.score}/>,
-            <Header />,
-            <Container handleClick={this.handleClick}/>
-           
-    
-
+        return (
+            <>
+                <Navbar score={this.state.score} />
+                <Header />
+                <Container handleClick={this.handleClick} />
+            </>
         )
-        
+
     }
 }
 
