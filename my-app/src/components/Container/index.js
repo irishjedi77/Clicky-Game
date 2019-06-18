@@ -14,24 +14,40 @@ import sloth10 from "../../images/sloth10.jpg";
 import sloth11 from "../../images/sloth11.jpeg";
 import sloth12 from "../../images/sloth12.jpeg";
 
-const images = [sloth1, sloth2, sloth3, sloth4, sloth5, sloth6, sloth7, sloth8, sloth9, sloth10, sloth11, sloth12]
-
 
 class Container extends Component {
-    shuffle(array) {
-        array.sort(() => Math.random() - 0.5);
+    constructor(props) {
+        super(props)
+        this.state = {images: [sloth1, sloth2, sloth3, sloth4, sloth5, sloth6, sloth7, sloth8, sloth9, sloth10, sloth11, sloth12]}
+        this.shuffle=this.shuffle.bind(this)
     }
 
+    componentWillMount() {
+        this.shuffle(this.state.images)
+    }
+
+    shuffle(array) {
+        this.setState({images: array.sort(() => Math.random() - 0.5)})
+        
+    }
+
+    // handleClick(e) {
+    //     e.preventDefault();
+    //     console.log("clicked")
+    //     this.shuffle(this.state.images)
+    // }
+
+
     render() {
-        this.shuffle(images)
+        // this.shuffle(this.state.images)
         return (
             <main className="container">
                 <div className="row">
                     {
-                        images.slice(0, 4).map(image => {
+                        this.state.images.slice(0, 4).map((image, i) => {
                             return (
-                                <div className="column">
-                                    <img src={image}></img>
+                                <div key={i} className="column">
+                                    <img onClick={e => this.props.handleClick(e, this.state.images, this.shuffle, image)} alt={"sloth" + i} src={image}></img>
                                 </div>
                             )
                         })
@@ -40,10 +56,10 @@ class Container extends Component {
                 </div>
                 <div className="row">
                 {
-                        images.slice(4, 8).map(image => {
+                        this.state.images.slice(4, 8).map((image, i) => {
                             return (
-                                <div className="column">
-                                    <img src={image}></img>
+                                <div key={i} className="column">
+                                    <img onClick={e => this.props.handleClick(e, this.state.images, this.shuffle, image )} alt={"sloth" + i} src={image}></img>
                                 </div>
                             )
                         })
@@ -52,10 +68,10 @@ class Container extends Component {
                 </div>
                 <div className="row">
                 {
-                        images.slice(8).map(image => {
+                        this.state.images.slice(8).map((image, i) => {
                             return (
-                                <div className="column">
-                                    <img src={image}></img>
+                                <div key={i} className="column">
+                                    <img onClick={e => this.props.handleClick(e, this.state.images, this.shuffle, image )} alt={"sloth" + i} src={image}></img>
                                 </div>
                             )
                         })

@@ -7,7 +7,7 @@ import Game from "./components/Game";
 // state = {
 //     clickedImages: [],
 //     score: 0,
-//     goal: 8,
+//     goal: 12,
 //     status: ""
 //   };
 
