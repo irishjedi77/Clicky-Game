@@ -11,7 +11,7 @@ function Navbar(props) {
       <ul>
         <li className="itemLeft"><a href="/">Clicky Game</a></li>
         <li className="itemCenter">Test Your Memory</li>
-        <li className="itemRight">Score: {props.score} | Top Score: 0</li>
+        <li className="itemRight">Score: {props.score} | Top Score: {props.topScore}</li>
       </ul>
     </nav>
 

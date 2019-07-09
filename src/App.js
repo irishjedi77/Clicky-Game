@@ -4,12 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Game from "./components/Game";
 
-// state = {
-//     clickedImages: [],
-//     score: 0,
-//     goal: 12,
-//     status: ""
-//   };
+
 
 class App extends Component {
 
